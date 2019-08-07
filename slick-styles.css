@@ -1,0 +1,36 @@
+.slick-dots {
+    bottom: 0px;  /* play with the number of pixels to position it as you want */
+    left: 0px; /* play with the number of pixels to position it as you want */
+  }
+
+.slick-dots li button:before
+{
+    font-size: 0.7rem;
+    line-height: 0.7rem;
+}
+
+.slick-track {
+  height: 100%;
+  overflow: hidden;
+}
+
+.slick-slide {
+  position: relative;
+}
+
+.slick-next:before{
+  font-size: 2rem;
+}
+
+.slick-next{ 
+  right: -0.1rem;
+}
+
+.slick-prev:before{
+  font-size: 2rem;
+}
+
+.slick-prev{
+  z-index: 1;
+  left: -1rem;
+}
