@@ -7,23 +7,26 @@ var $searchbar = $("#searchbar");
 var $abrirbusca = $("#abrirbusca");
 var $fecharbusca = $("#fecharbusca");
 
-$(window).scroll(function(e) {
-    console.log("teste scroll")
-    console.log(lastScroll);
+$(window).ready(function(){
+    $(".productValue").each(function(index, value){
+        value.innerHTML = value.innerHTML.replace(",", ".");
+        let newValue = value.innerHTML * 1.25;
+        value.innerHTML = newValue.toFixed(2).replace(".", ",");
+    })
+})
 
+$(window).scroll(function(e) {
     // add/remove class to navbar when scrolling to hide/show
     var scroll = $(window).scrollTop();
     if ((scroll >= 150)) {
         $('#oxuaNavbar').removeClass("position-absolute");
         $('#oxuaNavbar').addClass("sticky-top");
         $('#oxuaNavbar').addClass("pageStickyNavbarStyles");
-        $('body').addClass("bodyPaddingForNavbar");
         $brandtransparent.hide();
         $brandwhite.show();
         $searchbar.css('margin-top',"3rem");
     } else {
         $('#oxuaNavbar').removeClass("navbar-fixed-top");
-        $('body').removeClass("bodyPaddingForNavbar");
         $('#oxuaNavbar').addClass("position-absolute");
         $('#oxuaNavbar').removeClass("pageStickyNavbarStyles");
         $brandtransparent.show();
@@ -45,7 +48,6 @@ $('.dropdown').on('hide.bs.dropdown', function(e){
 });
 
 $("#cartButton").click(function(){
-    console.log("teste togo");
     $("#cart").toggle();
     $(".table-responsive").fadeToggle();
 })

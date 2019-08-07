@@ -23,8 +23,7 @@ $(document).ready(function(){
               settings: {
                 slidesToShow: 3,
                 slidesToScroll: 1,
-                infinite: true,
-                dots: true
+                infinite: true
               }
             },
             {

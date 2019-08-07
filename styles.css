@@ -493,6 +493,7 @@ footer #footerWrapper button:hover{
 
 footer #footerCopyright{
     background-color: #ffffff;
+    padding: 0.2rem;
 }
 
 footer #footerCopyright > div{
@@ -500,11 +501,7 @@ footer #footerCopyright > div{
 }
 
 footer #footerCopyright img{
-    width: 50%;
-    max-height: 3rem;
-    max-width: 5rem;
-    padding: 0.1rem;
-    display: block;
+    max-width: 100%;
 }
 
 footer #footerCopyright p{
