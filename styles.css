@@ -76,22 +76,19 @@ a:hover{
     padding-left: 0.35rem;
 }
 
-/* navbar buttons hover styling */
-
-.buttonNavbarHover:hover{
-    cursor: pointer;
-    background-color: white;
-    color: rgba(235,95,61, 1);
-    transition: 0.2s ease-in-out;
-    border-radius: 2px;
+#oxuaNavbar ul li span.badge{
+    top: 0.1rem;
+    right: -0.1rem;
+    background-color: #eb5f3d;
+    color: white;
+    border-radius: 50%;
 }
 
-.buttonNavbarHover:active{
-    cursor: pointer;
-    background-color: white;
-    color: rgba(235,95,61, 1);
-    transition: 0.2s ease-in-out;
-    border-radius: 2px;
+/* navbar buttons hover styling */
+
+.buttonNavbarHover a{
+    text-decoration: none;
+    color: inherit;
 }
 
 .dropdown-menu{
@@ -131,6 +128,10 @@ a:hover{
     cursor: pointer;
 }
 
+.navbar .userButton:hover{
+    cursor: pointer;
+}
+
 #cart{
     color: white !important;
     font-size: 0.9rem;
@@ -144,6 +145,7 @@ a:hover{
 
 #cart .table-responsive span.shrink{
     font-size: 0.7rem;
+    font-weight: 300;
     padding-right: 0.5rem;
 
 }
@@ -248,6 +250,30 @@ a:hover{
     margin-bottom:10px;
 }
 
+#divIsLogged{
+    top: 4rem;
+    display: none;
+}
+
+#divIsLogged #userDivAbsolute{
+    top: 0;
+    right: 0;
+}
+
+#divIsLogged #divIsLoggedWrapper{
+    padding: 1rem;
+    right: 10rem;
+    max-height: 8rem;
+    width: 16rem;
+    background-color: rgba(235, 95, 61,0.8);
+}
+
+#divIsLogged hr{
+    max-width: 90%;
+    border: 1px solid;
+    border-color: rgba(0, 0, 0, 0.08);
+}
+
 /* Beggin of showcase section */
 
 #showcase{
@@ -304,16 +330,22 @@ a:hover{
     height: auto;
     width: 50%;
     text-align: center;
-    color: #ffffff;
+    color: #ffffff !important;
+}
+
+#showcase .blockInsideOverlaySingleShowcase:hover{
+    color: #222222 !important;
+    transition: 0.3s ease-in-out;
 }
 
 #showcase .blockInsideOverlaySingleShowcase a{
     font-size: 0.8rem;
-    color: #ffffff;
+    color: inherit;
 }
 
 #showcase .blockInsideOverlaySingleShowcase a:hover{
     text-decoration: none;
+    color: inherit;
 }
 
 #showcase .blockInsideOverlaySingleShowcase hr{
@@ -327,7 +359,7 @@ a:hover{
 
 #sectionSummer1819{
     min-height: 90vh;
-    background-image: url("./images/sumer1819/banner-secundario.png");
+    background-image: url("./banners/banner-paralax.jpg");
     background-position: center;
     background-size: cover;
     position: relative;
@@ -374,6 +406,7 @@ a:hover{
 }
 #sectionSummer1819 .singProductSectionSummer p{
     margin: 0;
+    font-size: 0.8rem;
 }
 
 #sectionSummer1819 .singProductSectionSummer > div{
@@ -390,19 +423,19 @@ a:hover{
 
 #sectionSummer1819 .overlaySummerSectionSingProduct{
     background-color: white;
-    min-height: 5rem;    
+    max-height: 4rem;    
 }
 
 #sectionSummer1819 .overlaySummerSectionSingProduct > div{
     min-height: 5rem;
-    padding: 0.5rem;
+    padding: 0rem 0.5rem 0.5rem 0.5rem;
 }
 
 #sectionSummer1819 .overlaySummerSectionSingProduct button{
     border: 1px solid #eb5f3d;
     background-color: white;
+    margin: 0.1rem;
     color: #eb5f3d;
-    padding: 0.2rem;
     font-weight: bold;
 }
 
@@ -452,8 +485,14 @@ footer b{
 }
 
 footer #footerDivBorderBottom{
-    border-bottom: 0.001rem solid #a2dcd7;
+    border-bottom: 0.05rem solid;
+    border-top: 0.05rem solid;
+    border-color: rgba(255,255,255,0.2);
     margin-bottom: 3rem; 
+}
+
+footer #footerDivBorderBottom p{
+    padding-top: 1rem; 
 }
 
 footer #footerWrapper{
@@ -533,6 +572,45 @@ footer #footerCopyright p{
     line-height: 1rem;
     margin-bottom: 0;
     color: #888888;
+}
+
+/* back to top button */
+#backToTopDiv{
+    display: none;
+}
+#backToTopDiv button{
+    width: 3.5rem;
+    height: 3.5rem;
+    bottom: 2rem;
+    right: 1rem;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0px 0px 3px black;
+    background-color: #ffffff;
+    display: flex;
+    font-size: 0.5rem;
+    text-align: center;
+    outline: none;
+    
+}
+
+#backToTopDiv button > div:first-child{
+    max-height: 100%;
+}
+
+#backToTopDiv button p{
+    margin: 0;
+}
+
+#backToTopDiv button i{
+    font-size: 1.5rem;
+}
+
+#backToTopDiv button #backToTopInsideBorder{
+    border-top: 1px solid;
+    border-color: rgba(0,0,0,0.5);
+    width: 100%;
+    margin-bottom: 0.1rem; 
 }
 
 /* Basic hover effects */

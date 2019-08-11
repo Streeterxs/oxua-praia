@@ -39,6 +39,8 @@ $(window).scroll(function(e) {
         $($listaIconesAtiva).css('display', 'flex');
         $searchbar.css('margin-top',"3rem");
         testIfSearchIsOpenAndReplaceIcons();
+        $('#divIsLogged').css('top', '3rem');
+        $("#cart").css('marginTop', '3rem');
     } else {
         $listaIconesAtiva = "#listaIconsBrancos";
         $('#oxuaNavbar').removeClass("navbar-fixed-top");
@@ -48,19 +50,20 @@ $(window).scroll(function(e) {
         $brandwhite.hide();
         $("#listaIconsPretos").hide();
         $($listaIconesAtiva).css('display', 'flex');
-        console.log($($listaIconesAtiva).show());
         $searchbar.css('margin-top',"4rem");
         testIfSearchIsOpenAndReplaceIcons();
+        $('#divIsLogged').css('top', '4rem');
+        $("#cart").css('marginTop', '4rem');
+    }
+
+    if ((scroll >= 700)){
+        $("#backToTopDiv").fadeIn();
+    } else{
+        $("#backToTopDiv").fadeOut();
     }
 
     lastScroll = scroll;
 });
-
-$('.dropdown').on('show.bs.dropdown', function(e){
-    $('.dropdown-menu').removeClass('invisible');
-    $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
-  });
-
   // ADD SLIDEUP ANIMATION TO DROPDOWN-MENU
 $('.dropdown').on('hide.bs.dropdown', function(e){
     $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
@@ -69,6 +72,10 @@ $('.dropdown').on('hide.bs.dropdown', function(e){
 $(".cartButton").click(function(){
     $("#cart").toggle();
     $(".table-responsive").fadeToggle();
+})
+
+$(".userButton").click(function(){
+    $("#divIsLogged").fadeToggle();
 })
 
 $(".busca").click(function(){
@@ -88,3 +95,8 @@ function testIfSearchIsOpenAndReplaceIcons(){
         $($listaIconesAtiva + " " + $abrirbusca).show();
     }
 }
+// back to top button
+$('#buttonToTop').on('click', function(event) {
+    event.preventDefault();
+    $('html, body').animate({ scrollTop: 0 }, 'slow');         
+  });

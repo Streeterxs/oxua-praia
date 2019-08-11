@@ -3,8 +3,11 @@
     left: 0px; /* play with the number of pixels to position it as you want */
   }
 
-.slick-dots li button:before
-{
+.slick-dots li{
+  margin: 0;
+}
+
+.slick-dots li button:before{
   color: #fff;
   opacity: 0.7;
   font-size: 0.7rem;
@@ -30,7 +33,7 @@
 }
 
 .slick-next{ 
-  right: -0.1rem;
+  right: -0.3rem;
 }
 
 .slick-prev:before{
@@ -39,5 +42,5 @@
 
 .slick-prev{
   z-index: 1;
-  left: -1rem;
+  left: -1.05rem;
 }
